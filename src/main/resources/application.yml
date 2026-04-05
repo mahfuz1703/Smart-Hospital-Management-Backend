@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: smart-health
+
+  profiles:
+    active: dev
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smart_health
+    username: smarthealth
+    password: smarthealth
+    driver-class-name: org.postgresql.Driver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
