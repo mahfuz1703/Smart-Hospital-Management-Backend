@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         jdbc:
@@ -15,7 +15,7 @@ spring:
     open-in-view: false
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/smart_health
+    url: jdbc:postgresql://localhost:5433/smart_health
     username: smarthealth
     password: smarthealth
     driver-class-name: org.postgresql.Driver

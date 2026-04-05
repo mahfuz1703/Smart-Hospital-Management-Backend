@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: smarthealth-postgres
+    environment:
+      POSTGRES_DB: smart_health
+      POSTGRES_USER: smarthealth
+      POSTGRES_PASSWORD: smarthealth
+    ports:
+      - "5433:5432"
+    volumes:
+      - smarthealth_pgdata:/var/lib/postgresql/data
+
+volumes:
+  smarthealth_pgdata:
